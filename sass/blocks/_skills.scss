@@ -1,0 +1,111 @@
+.skills {
+    padding: 120px 11px 0 11px;
+    min-height: 1024px;
+
+    &__title {
+        position: relative;
+        padding-top: 6px;
+        margin: 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        @include before_circle;
+
+        &:before {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: grid;
+        margin-top: 60px;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, minmax(270px, auto));
+        gap: 13px;
+    }
+
+    &__item {
+        position: relative;
+        padding: 30px 30px 25px 30px;
+        border: 1px solid #000000;
+
+        &-icon {
+            &_mt45 {
+                margin-top: calc(45px - 30px);
+            }
+        }
+
+        &-title {
+            position: absolute;
+            left: 30px;
+            bottom: 135px;
+        }
+
+        &-text {
+            position: absolute;
+            left: 30px;
+            top: 150px;
+            padding-right: 30px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: $black-color;
+        }
+
+    }
+    &__creation{
+        &-wrapper{
+            display: grid;
+            grid-template-columns: repeat(3,350px);
+            grid-template-rows: repeat(2,minmax(70px,auto));
+            margin-top: 120px;
+            column-gap: 45px;
+            row-gap: 30px;
+        }
+        &-item{
+            position: relative;
+        }
+        &-title{
+            position: relative;
+            padding-left: 13px;
+            padding-top: 8px;
+            @include before_circle;
+            &:before{
+                left: 0;
+                top: 1px;
+            }
+        }
+        &-rate{
+            position: absolute;
+            top: 7px;
+            right: 0;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+        }
+        &-scale {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+            z-index: 1;
+            &_active{
+                transition: 1s all;
+                height: 100%;
+                background: $main-color;
+                border-radius: 4px;
+                z-index: 2;
+            }
+        }
+    }
+}

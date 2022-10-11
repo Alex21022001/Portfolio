@@ -1,0 +1,85 @@
+.experience {
+    padding: 120px 65px 0 65px;
+
+    &__wrapper{
+        padding: 0 65px 0 65px;
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(2,425px);
+        column-gap: 136px;
+    }
+    &__column{
+        &-title{
+            position: relative;
+            padding-left: 35px;
+            margin: 0;
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                left: 0;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 100%;
+                background: $main-color;
+            }
+        }
+    }
+    &__item{
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0;
+            transform: translateX(-50%);
+            top: -8px;
+            width: 1px;
+            height: 100%;
+            background: $black-color;
+        }
+        &-head{
+            padding: 45px 0 0 100px;
+            position: relative;
+            h4{
+                margin: 0;
+            }
+            &:before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 42px;
+                height: 1px;
+                background: $black-color;
+                left: 0;
+                top: 63px;
+            }
+        }
+        &-icon{
+            position: absolute;
+            left: 60px;
+            bottom: 0;
+            @include before_circle;
+            &:before{
+                top: -14px;
+                left: -18px;
+            }
+
+        }
+        &-location{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+        &-text{
+            padding-left: 43px;
+            margin-top: 12px;
+            font-weight: 500;
+            font-size: 12px;
+            color: #000000;
+        }
+    }
+}
